@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>King Foot Massage</title>
+    <title>LAVISH LASH</title>
     <meta
       name="description"
-      content="Experience ultimate relaxation at King Foot Massage, known for exceptional massages tailored to your needs. Clients love our serene environment, skilled therapists, and personalized care. Unwind and recharge with us."
+      content="Experience luxurious eyelash extensions at LAVISH LASH. Professional lash artists offering Classic, Hybrid, and Volume styles. Transform your look with our premium lash services."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <style>
-      /* Comfort Spa Stylesheet */
+      /* LAVISH LASH Stylesheet */
 
       /* Base Styles */
       body {
@@ -56,7 +56,7 @@
         justify-content: center;
         align-items: center;
         padding: 1rem;
-        background-color: #6B73FF; /* Calming purple-blue background */
+        background-color: #D4AF37; /* Luxurious gold background */
         position: fixed;
         top: 0;
         width: 100%;
@@ -92,12 +92,12 @@
       }
 
       nav ul li a:hover {
-        color: #FFD700;
+        color: #FFB6C1;
       }
 
       /* Home Section */
       .home {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.9) 0%, rgba(255, 182, 193, 0.9) 100%), url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
         background-size: cover;
         background-position: center;
         height: 100vh;
@@ -156,169 +156,6 @@
         font-style: italic;
       }
 
-      /* Gallery Section */
-      #gallery {
-        background: linear-gradient(135deg, #f0f4ff 0%, #e1ecff 100%);
-        padding: 60px 20px;
-      }
-
-      .gallery-container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 25px;
-        margin: 40px 0;
-      }
-
-      .gallery-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
-        cursor: pointer;
-        background: white;
-        aspect-ratio: 4/3;
-      }
-
-      .gallery-item:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-      }
-
-      .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-      }
-
-      .gallery-item:hover img {
-        transform: scale(1.05);
-      }
-
-      .gallery-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, rgba(107, 115, 255, 0.8), rgba(118, 75, 162, 0.8));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .gallery-item:hover .gallery-overlay {
-        opacity: 1;
-      }
-
-      .gallery-overlay-text {
-        color: white;
-        text-align: center;
-        padding: 20px;
-      }
-
-      .gallery-overlay h3 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        color: white;
-      }
-
-      .gallery-overlay p {
-        font-size: 1rem;
-        opacity: 0.9;
-      }
-
-      /* Modal for full-size image viewing */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 2000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        animation: fadeIn 0.3s ease;
-      }
-
-      .modal.active {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-
-      .modal-content {
-        position: relative;
-        max-width: 90%;
-        max-height: 90%;
-        margin: auto;
-      }
-
-      .modal-content img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      }
-
-      .close-modal {
-        position: absolute;
-        top: -40px;
-        right: 0;
-        color: white;
-        font-size: 35px;
-        font-weight: bold;
-        cursor: pointer;
-        background: none;
-        border: none;
-        transition: color 0.3s ease;
-      }
-
-      .close-modal:hover {
-        color: #6B73FF;
-      }
-
-      .gallery-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255,255,255,0.2);
-        backdrop-filter: blur(10px);
-        color: white;
-        border: none;
-        font-size: 24px;
-        padding: 15px 20px;
-        cursor: pointer;
-        border-radius: 50%;
-        transition: all 0.3s ease;
-      }
-
-      .gallery-nav:hover {
-        background: rgba(255,255,255,0.3);
-        transform: translateY(-50%) scale(1.1);
-      }
-
-      .prev-btn {
-        left: -60px;
-      }
-
-      .next-btn {
-        right: -60px;
-      }
-
       /* Call and Book Online Section */
       .contact-buttons {
         display: flex;
@@ -346,7 +183,7 @@
       }
 
       .contact-card h3 {
-        color: #6B73FF;
+        color: #D4AF37;
         font-size: 1.6rem;
         margin-bottom: 15px;
         font-weight: 500;
@@ -355,7 +192,7 @@
       .phone-number {
         font-size: 1.9rem;
         font-weight: bold;
-        color: #764ba2;
+        color: #FFB6C1;
         text-decoration: none;
         display: block;
         margin: 15px 0;
@@ -363,12 +200,172 @@
       }
 
       .phone-number:hover {
-        color: #667eea;
+        color: #D4AF37;
       }
 
       .contact-card p {
         color: #666;
         line-height: 1.5;
+      }
+
+      /* Gallery Section Styles */
+      #gallery {
+        background: linear-gradient(135deg, #fff9f0 0%, #ffeef0 100%);
+        padding: 80px 20px;
+      }
+
+      .gallery-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin: 40px 0;
+      }
+
+      .photo-item {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background: white;
+        aspect-ratio: 4/3;
+      }
+
+      .photo-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      }
+
+      .photo-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .photo-item:hover img {
+        transform: scale(1.05);
+      }
+
+      .photo-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        color: white;
+        padding: 20px;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .photo-item:hover .photo-overlay {
+        transform: translateY(0);
+      }
+
+      .photo-overlay h4 {
+        margin: 0 0 5px 0;
+        font-size: 1.2rem;
+      }
+
+      .photo-overlay p {
+        margin: 0;
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      /* Lightbox Styles */
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        z-index: 2000;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .lightbox.active {
+        display: flex;
+      }
+
+      .lightbox-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      }
+
+      .lightbox img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        background: rgba(0,0,0,0.5);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+      }
+
+      .lightbox-close:hover {
+        background: rgba(0,0,0,0.8);
+      }
+
+      .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 15px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        border-radius: 5px;
+      }
+
+      .lightbox-nav:hover {
+        background: rgba(0,0,0,0.8);
+      }
+
+      .lightbox-prev {
+        left: 20px;
+      }
+
+      .lightbox-next {
+        right: 20px;
+      }
+
+      .loading-message {
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        margin: 40px 0;
       }
 
       /* Booking Form */
@@ -397,7 +394,7 @@
       }
 
       .booking-form h3 {
-        color: #6B73FF;
+        color: #D4AF37;
         margin-bottom: 25px;
         font-size: 2rem;
         font-weight: 400;
@@ -434,9 +431,9 @@
       .form-group select:focus,
       .form-group textarea:focus {
         outline: none;
-        border-color: #6B73FF;
+        border-color: #D4AF37;
         background: white;
-        box-shadow: 0 0 0 3px rgba(107, 115, 255, 0.1);
+        box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
       }
 
       .form-row {
@@ -467,7 +464,7 @@
 
       /* Button Styles */
       .book-button, .call-button {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #D4AF37 0%, #FFB6C1 100%);
         color: white;
         padding: 15px 30px;
         border: none;
@@ -480,16 +477,16 @@
         margin: 10px;
         cursor: pointer;
         text-align: center;
-        box-shadow: 0 4px 15px rgba(107, 115, 255, 0.3);
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
       }
 
       .book-button:hover, .call-button:hover {
         transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(107, 115, 255, 0.4);
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
       }
 
       .submit-btn {
-        background: linear-gradient(135deg, #6B73FF 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #D4AF37 0%, #FFB6C1 100%);
         color: white;
         padding: 18px 35px;
         border: none;
@@ -500,12 +497,12 @@
         width: 100%;
         transition: all 0.3s ease;
         margin-top: 15px;
-        box-shadow: 0 4px 15px rgba(107, 115, 255, 0.3);
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
       }
 
       .submit-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(107, 115, 255, 0.4);
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
       }
 
       /* Services and Reviews Containers */
@@ -518,7 +515,7 @@
       }
 
       #services {
-        background: linear-gradient(135deg, #f5f7ff 0%, #e8f2ff 100%);
+        background: linear-gradient(135deg, #fff9f5 0%, #ffeef5 100%);
       }
 
       #specials {
@@ -538,17 +535,17 @@
         box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         width: 320px;
         transition: all 0.3s ease;
-        border: 1px solid rgba(107, 115, 255, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.1);
       }
 
       .service-box:hover {
         transform: translateY(-8px);
         box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        border-color: rgba(107, 115, 255, 0.3);
+        border-color: rgba(212, 175, 55, 0.3);
       }
 
       .service-box h3, .review-card h3 {
-        color: #6B73FF;
+        color: #D4AF37;
         font-size: 1.6rem;
         margin-bottom: 15px;
         font-weight: 500;
@@ -562,23 +559,24 @@
       /* Price Wrapper */
       .service-box .price-wrapper {
         margin-top: 20px;
-        background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
+        background: linear-gradient(135deg, #fff9f5 0%, #ffeef5 100%);
         padding: 15px;
         border-radius: 10px;
-        display: none;
-        min-height: 100px;
-        border-left: 4px solid #6B73FF;
+        display: block;
+        min-height: 50px;
+        border-left: 4px solid #D4AF37;
       }
 
       .price-wrapper h4 {
         margin: 5px 0;
         color: #333;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+        text-align: center;
       }
 
       /* Contact Section */
       #contact {
-        background: linear-gradient(135deg, #e8f5e9 0%, #d4eddb 100%);
+        background: linear-gradient(135deg, #fff9f5 0%, #ffeef5 100%);
       }
 
       .appointment-card {
@@ -597,7 +595,7 @@
         padding: 40px;
         border-radius: 20px;
         box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        border: 1px solid rgba(107, 115, 255, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.1);
       }
 
       .appointment-info {
@@ -613,20 +611,20 @@
       }
 
       .appointment-info a {
-        color: #6B73FF;
+        color: #D4AF37;
         text-decoration: none;
         transition: color 0.3s ease;
         font-weight: 600;
       }
 
       .appointment-info a:hover {
-        color: #764ba2;
+        color: #FFB6C1;
         text-decoration: underline;
       }
 
       .appointment-map h3 {
         margin-top: 25px;
-        color: #6B73FF;
+        color: #D4AF37;
         font-size: 1.4rem;
         font-weight: 500;
       }
@@ -675,18 +673,27 @@
           max-width: 400px;
         }
 
-        .gallery-grid {
-          grid-template-columns: 1fr;
-          gap: 20px;
+        .photo-grid {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 15px;
         }
 
-        .gallery-nav {
-          display: none;
-        }
-
-        .modal-content {
+        .lightbox-content {
           max-width: 95%;
-          max-height: 85%;
+          max-height: 95%;
+        }
+
+        .lightbox-nav {
+          padding: 10px;
+          font-size: 20px;
+        }
+
+        .lightbox-prev {
+          left: 10px;
+        }
+
+        .lightbox-next {
+          right: 10px;
         }
       }
 
@@ -716,10 +723,9 @@
           font-size: 1.6rem;
         }
 
-        .gallery-grid {
+        .photo-grid {
           grid-template-columns: 1fr;
           gap: 15px;
-          margin: 20px 0;
         }
       }
     </style>
@@ -739,8 +745,8 @@
     <!-- Home Section -->
     <section id="home" class="home">
       <div class="home-content">
-        <h1>King Foot Massage</h1>
-        <p class="spa-tagline">Your sanctuary of tranquility and rejuvenation</p>
+        <h1>LAVISH LASH</h1>
+        <p class="spa-tagline">Your destination for luxurious eyelash extensions</p>
       </div>
 
       <!-- Call and Book Online Cards -->
@@ -748,8 +754,8 @@
         <!-- Call Card -->
         <div class="contact-card">
           <h3>📞 Call for Appointment</h3>
-          <a href="tel:+1-469-639-0889" class="phone-number">469-639-0889</a>
-          <p>Speak directly with our friendly staff to schedule your perfect massage experience within 30 minutes.</p>
+          <a href="tel:+1-352-640-3934" class="phone-number">352-640-3934</a>
+          <p>Speak directly with our professional lash artists to schedule your perfect lash experience within 30 minutes.</p>
         </div>
 
         <!-- Book Online Card -->
@@ -763,7 +769,7 @@
       <!-- Booking Form (Initially Hidden) -->
       <div id="bookingForm" class="booking-form">
         <button class="close-form" onclick="hideBookingForm()">&times;</button>
-        <h3>Schedule Your Visit</h3>
+        <h3>Schedule Your Lash Appointment</h3>
         <form onsubmit="submitBooking(event)">
           <div class="form-row">
             <div class="form-group">
@@ -786,18 +792,6 @@
             <input type="email" id="email" name="email">
           </div>
 
-          <div class="form-group">
-            <label for="people">Number of People *</label>
-            <select id="people" name="people" required>
-              <option value="">Select Number</option>
-              <option value="1">1 Person</option>
-              <option value="2">2 People</option>
-              <option value="3">3 People</option>
-              <option value="4">4 People</option>
-              <option value="5+">5+ People (Call for Group Booking)</option>
-            </select>
-          </div>
-
           <div class="form-row">
             <div class="form-group">
               <label for="date">Preferred Date *</label>
@@ -805,41 +799,23 @@
             </div>
             <div class="form-group">
               <label for="time">Preferred Time *</label>
-              <input type="time" id="time" name="time" min="09:00" max="22:00" required>
+              <input type="time" id="time" name="time" min="09:00" max="13:00" required>
             </div>
           </div>
 
           <div class="form-group">
-            <label for="service">Preferred Service</label>
-            <select id="service" name="service">
+            <label for="service">Lash Extension Service *</label>
+            <select id="service" name="service" required>
               <option value="">Select a Service</option>
-              <option value="Full Body Massage (Swedish/Deep Tissue) - 30min">Full Body Massage (30min) - $50 Cash/$55 Card</option>
-              <option value="Full Body Massage (Swedish/Deep Tissue) - 60min">Full Body Massage (60min) - $70 Cash/$75 Card</option>
-              <option value="Full Body Massage (Swedish/Deep Tissue) - 90min">Full Body Massage (90min) - $100 Cash/$105 Card</option>
-              <option value="Combo Special (Body+Foot) - 60min">Combo Special (Body+Foot) 60min - $70 Cash/$75 Card</option>
-              <option value="Combo Special (Body+Foot) - 90min">Combo Special (Body+Foot) 90min - $100 Cash/$105 Card</option>
-              <option value="Foot Massage (cloth on) - 30min">Foot Massage (30min) - $35 Cash/$40 Card</option>
-              <option value="Foot Massage (Head+Arm+Foot+Back) - 60min">Foot Massage (Head+Arm+Foot+Back) 60min - $60 Cash/$65 Card</option>
-              <option value="Foot Massage (Head+Arm+Foot+Back) - 90min">Foot Massage (Head+Arm+Foot+Back) 90min - $90 Cash/$95 Card</option>
-              <option value="Chair Massage - 15min">Chair Massage (15min) - $20</option>
-              <option value="Chair Massage - 20min">Chair Massage (20min) - $30</option>
-              <option value="Chair Massage - 30min">Chair Massage (30min) - $40</option>
+              <option value="Classic Style - $100">Classic Style - $100</option>
+              <option value="Hybrid Style - $120">Hybrid Style - $120</option>
+              <option value="Volume Style - $120">Volume Style - $120</option>
             </select>
-          </div>
-
-          <div class="form-group">
-            <label for="addons">Add-ons (Optional)</label>
-            <select id="addons" name="addons" multiple>
-              <option value="Hot Stone (+$10)">Hot Stone (+$10)</option>
-              <option value="Essential Oil (+$10)">Essential Oil (+$10)</option>
-              <option value="CBD Oil/Cream (+$10)">CBD Oil/Cream (+$10)</option>
-            </select>
-            <small style="color: #666;">Hold Ctrl (PC) or Cmd (Mac) to select multiple options</small>
           </div>
 
           <div class="form-group">
             <label for="notes">Special Requests</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Any preferences, health considerations, or special requests..."></textarea>
+            <textarea id="notes" name="notes" rows="3" placeholder="Any preferences, allergies, or special requests..."></textarea>
           </div>
 
           <button type="submit" class="submit-btn">Request Appointment</button>
@@ -852,46 +828,286 @@
 
     <!-- Services Section -->
     <section id="services">
-      <h2>Our Massage Services</h2>
-      <h4>Hover or tap for detailed pricing information</h4>
+      <h2>Our Lash Extension Services</h2>
+      <h4>Professional eyelash extensions tailored to your style</h4>
       <div class="services">
         <div class="service-box">
-          <h3>Full Body Massage</h3>
+          <h3>Classic Style</h3>
           <p>
-            Choose between Swedish relaxation or Deep Tissue therapy massage to target your specific needs and preferences.
+            Perfect for a natural, everyday look. One extension is applied to each natural lash for length and subtle definition.
           </p>
           <div class="price-wrapper">
-            <h4>30 min: $50 Cash / $55 Card</h4>
-            <h4>60 min: $70 Cash / $75 Card</h4>
-            <h4>90 min: $100 Cash / $105 Card</h4>
+            <h4>$100</h4>
           </div>
         </div>
 
         <div class="service-box">
-          <h3>Combo Special (Body + Foot)</h3>
+          <h3>Hybrid Style</h3>
           <p>
-            Get the best of both worlds with our combination massage that includes both body and foot massage for complete relaxation.
+            The perfect blend of Classic and Volume techniques. Combines natural-looking Classic lashes with strategically placed Volume fans for texture and fullness.
           </p>
           <div class="price-wrapper">
-            <h4>60 min: $70 Cash / $75 Card</h4>
-            <h4>90 min: $100 Cash / $105 Card</h4>
+            <h4>$120</h4>
           </div>
         </div>
 
         <div class="service-box">
-          <h3>Foot Massage</h3>
+          <h3>Volume Style</h3>
           <p>
-            Our signature foot massage with cloth on, or comprehensive treatment including Head, Arm, Foot and Back massage.
+            For dramatic, full lashes. Multiple lightweight extensions are applied to each natural lash creating a bold, glamorous look perfect for special occasions.
           </p>
           <div class="price-wrapper">
-            <h4>30 min (cloth on): $35 Cash / $40 Card</h4>
-            <h4>60 min (Head+Arm+Foot+Back): $60 Cash / $65 Card</h4>
-            <h4>90 min (Head+Arm+Foot+Back): $90 Cash / $95 Card</h4>
+            <h4>$120</h4>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <div class="gallery-container">
+        <h2>Our Work Gallery</h2>
+        <h4>See the stunning transformations we create</h4>
+        
+        <div class="photo-grid" id="photoGrid">
+          <div class="photo-item" onclick="openLightbox(0)">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Classic Lash Extensions">
+            <div class="photo-overlay">
+              <h4>Classic Style</h4>
+              <p>Natural, everyday elegance</p>
+            </div>
+          </div>
+          
+          <div class="photo-item" onclick="openLightbox(1)">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volume Lash Extensions">
+            <div class="photo-overlay">
+              <h4>Volume Style</h4>
+              <p>Dramatic, full glamour</p>
+            </div>
+          </div>
+          
+          <div class="photo-item" onclick="openLightbox(2)">
+            <img src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hybrid Lash Extensions">
+            <div class="photo-overlay">
+              <h4>Hybrid Style</h4>
+              <p>Perfect blend of natural and volume</p>
+            </div>
+          </div>
+          
+          <div class="photo-item" onclick="openLightbox(3)">
+            <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Before and After">
+            <div class="photo-overlay">
+              <h4>Transformation</h4>
+              <p>Amazing before and after results</p>
+            </div>
+          </div>
+          
+          <div class="photo-item" onclick="openLightbox(4)">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lash Application Process">
+            <div class="photo-overlay">
+              <h4>Professional Application</h4>
+              <p>Expert technique and precision</p>
+            </div>
+          </div>
+          
+          <div class="photo-item" onclick="openLightbox(5)">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beautiful Eye Makeup">
+            <div class="photo-overlay">
+              <h4>Stunning Results</h4>
+              <p>Beautiful, long-lasting lashes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <div class="lightbox-content" onclick="event.stopPropagation()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">&#10094;</button>
+        <img id="lightboxImage" src="" alt="">
+        <button class="lightbox-nav lightbox-next" onclick="changeImage(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Specials Section -->
+    <section id="specials">
+      <h2>Why Choose LAVISH LASH?</h2>
+      <h4>Experience the luxury of professional eyelash extensions</h4>
+      <div class="services">
+        <div class="service-box">
+          <h3>Certified Professionals</h3>
+          <p>
+            Our experienced lash artists are certified and trained in the latest techniques to ensure safe, beautiful results every time.
+          </p>
         </div>
 
         <div class="service-box">
-          <h3>Chair Massage</h3>
+          <h3>Premium Quality</h3>
           <p>
-            Quick and convenient chair massage perfect for targeting neck, shoulders, and back tension during your busy day.
+            We use only the highest quality synthetic mink lashes and medical-grade adhesives for long-lasting, comfortable wear.
           </p>
+        </div>
+
+        <div class="service-box">
+          <h3>Personalized Service</h3>
+          <p>
+            Each client receives a customized consultation to determine the perfect lash style for your eye shape and lifestyle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Visit Our Studio</h2>
+      <div class="appointment-card">
+        <div class="appointment-map">
+          <div class="appointment-info">
+            <p><strong>📍 Address:</strong> 2606 SW 19th Ave Unit 200 Studio 9, Ocala FL 34471</p>
+            <p><strong>📞 Phone:</strong> <a href="tel:+1-352-640-3934">352-640-3934</a></p>
+            <p><strong>🕒 Hours:</strong> 9:00 AM - 1:00 AM</p>
+            <p><strong>💳 Payment:</strong> Cash and Card Accepted</p>
+          </div>
+          
+          <h3>Professional Eyelash Extensions</h3>
+          <p style="color: #666; text-align: center; margin-top: 15px;">
+            Located in the heart of Ocala, our luxurious studio provides a relaxing environment 
+            for your lash transformation. We're open late to accommodate your busy schedule!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 LAVISH LASH. All rights reserved. | Professional Eyelash Extensions in Ocala, FL</p>
+    </footer>
+
+    <script>
+      // Gallery images array
+      const galleryImages = [
+        'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1583001931096-959e9a1a6223?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+        'https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+      ];
+
+      let currentImageIndex = 0;
+
+      // Booking Form Functions
+      function showBookingForm() {
+        document.getElementById('bookingForm').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function hideBookingForm() {
+        document.getElementById('bookingForm').classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      function submitBooking(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(event.target);
+        const formObject = {};
+        formData.forEach((value, key) => {
+          formObject[key] = value;
+        });
+        
+        alert('Thank you for your booking request! We will contact you within 30 minutes to confirm your lash appointment.');
+        console.log('Booking details:', formObject);
+        
+        hideBookingForm();
+        event.target.reset();
+      }
+
+      // Gallery Functions
+      function openLightbox(index) {
+        currentImageIndex = index;
+        document.getElementById('lightboxImage').src = galleryImages[index];
+        document.getElementById('lightbox').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      function changeImage(direction) {
+        currentImageIndex += direction;
+        if (currentImageIndex >= galleryImages.length) {
+          currentImageIndex = 0;
+        } else if (currentImageIndex < 0) {
+          currentImageIndex = galleryImages.length - 1;
+        }
+        document.getElementById('lightboxImage').src = galleryImages[currentImageIndex];
+      }
+
+      // Smooth scrolling for navigation links
+      document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+              const offsetTop = targetSection.offsetTop - 70; // Account for fixed nav
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+
+        // Set minimum date for booking form to today
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+          const today = new Date().toISOString().split('T')[0];
+          dateInput.setAttribute('min', today);
+        }
+
+        // Close booking form when clicking outside
+        document.addEventListener('click', function(event) {
+          const bookingForm = document.getElementById('bookingForm');
+          const bookButton = document.querySelector('.book-button');
+          
+          if (bookingForm.classList.contains('active') && 
+              !bookingForm.contains(event.target) && 
+              !bookButton.contains(event.target)) {
+            hideBookingForm();
+          }
+        });
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', function(event) {
+          const lightbox = document.getElementById('lightbox');
+          if (lightbox.classList.contains('active')) {
+            if (event.key === 'Escape') {
+              closeLightbox();
+            } else if (event.key === 'ArrowLeft') {
+              changeImage(-1);
+            } else if (event.key === 'ArrowRight') {
+              changeImage(1);
+            }
+          }
+        });
+      });
+
+      // Close lightbox when clicking on the lightbox background
+      document.getElementById('lightbox').addEventListener('click', function(event) {
+        if (event.target === this) {
+          closeLightbox();
+        }
+      });
+    </script>
+  </body>
+</html>
