@@ -97,7 +97,8 @@
 
       /* Home Section */
       .home {
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.9) 0%, rgba(255, 182, 193, 0.9) 100%), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+        /* 封面图：你提供的宽幅图 */
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.9) 0%, rgba(255, 182, 193, 0.9) 100%), url('https://d3nb97lilvchvx.cloudfront.net/category_page/eyelash.jpg') center/cover;
         background-size: cover;
         background-position: center;
         height: 100vh;
@@ -279,3 +280,835 @@
         font-size: 0.9rem;
         opacity: 0.9;
       }
+
+      /* Lightbox Styles */
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        z-index: 2000;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .lightbox.active {
+        display: flex;
+      }
+
+      .lightbox-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      }
+
+      .lightbox img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        background: rgba(0,0,0,0.5);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+      }
+
+      .lightbox-close:hover {
+        background: rgba(0,0,0,0.8);
+      }
+
+      .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 15px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        border-radius: 5px;
+      }
+
+      .lightbox-nav:hover {
+        background: rgba(0,0,0,0.8);
+      }
+
+      .lightbox-prev {
+        left: 20px;
+      }
+
+      .lightbox-next {
+        right: 20px;
+      }
+
+      .loading-message {
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        margin: 40px 0;
+      }
+
+      /* Booking Form */
+      .booking-form {
+        display: none;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(15px);
+        color: #333;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        max-width: 550px;
+        margin: 20px auto;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+
+      .booking-form.active {
+        display: block;
+        animation: slideIn 0.3s ease-out;
+      }
+
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .booking-form h3 {
+        color: #D4AF37;
+        margin-bottom: 25px;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #555;
+        font-size: 0.95rem;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #D4AF37;
+        background: white;
+        box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+      }
+
+      .form-row {
+        display: flex;
+        gap: 15px;
+      }
+
+      .form-row .form-group {
+        flex: 1;
+      }
+
+      .close-form {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #999;
+        transition: color 0.3s ease;
+      }
+
+      .close-form:hover {
+        color: #333;
+        transform: scale(1.1);
+      }
+
+      /* Button Styles */
+      .book-button, .call-button {
+        background: linear-gradient(135deg, #D4AF37 0%, #FFB6C1 100%);
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 25px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin: 10px;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      }
+
+      .book-button:hover, .call-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+      }
+
+      .submit-btn {
+        background: linear-gradient(135deg, #D4AF37 0%, #FFB6C1 100%);
+        color: white;
+        padding: 18px 35px;
+        border: none;
+        border-radius: 25px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        transition: all 0.3s ease;
+        margin-top: 15px;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+      }
+
+      /* Services and Reviews Containers */
+      .services, .reviews-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        margin: 40px 0;
+      }
+
+      #services {
+        background: linear-gradient(135deg, #fff9f5 0%, #ffeef5 100%);
+      }
+
+      #specials {
+        background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+      }
+
+      #specials .services {
+        background: transparent;
+      }
+
+      /* Service Box and Review Card */
+      .service-box, .review-card {
+        background: white;
+        margin: 10px;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        width: 320px;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(212, 175, 55, 0.1);
+      }
+
+      .service-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        border-color: rgba(212, 175, 55, 0.3);
+      }
+
+      .service-box h3, .review-card h3 {
+        color: #D4AF37;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+        font-weight: 500;
+      }
+
+      .service-box p, .review-card p {
+        color: #666;
+        line-height: 1.7;
+      }
+
+      /* Price Wrapper */
+      .service-box .price-wrapper {
+        margin-top: 20px;
+        background: linear-gradient(135deg, #fff9f5 0%, #ffeef5 100%);
+        padding: 15px;
+        border-radius: 10px;
+        display: block;
+        min-height: 50px;
+        border-left: 4px solid #D4AF37;
+      }
+
+      .price-wrapper h4 {
+        margin: 5px 0;
+        color: #333;
+        font-size: 1.3rem;
+        text-align: center;
+      }
+
+      /* Contact Section */
+      #contact {
+        background: linear-gradient(135deg, #fff9f5 0%, #ffeef5 100%);
+      }
+
+      .appointment-card {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .appointment-map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        border: 1px solid rgba(212, 175, 55, 0.1);
+      }
+
+      .appointment-info {
+        margin-top: 30px;
+        text-align: left;
+        width: 100%;
+      }
+
+      .appointment-info p {
+        margin: 15px 0;
+        font-size: 1.2rem;
+        color: #555;
+      }
+
+      .appointment-info a {
+        color: #D4AF37;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-weight: 600;
+      }
+
+      .appointment-info a:hover {
+        color: #FFB6C1;
+        text-decoration: underline;
+      }
+
+      .appointment-map h3 {
+        margin-top: 25px;
+        color: #D4AF37;
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+
+      /* Footer */
+      footer {
+        background: linear-gradient(135deg, #333 0%, #555 100%);
+        color: white;
+        text-align: center;
+        padding: 30px 0;
+        margin-top: 50px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          padding: 15px;
+        }
+        
+        nav ul {
+          margin-top: 15px;
+        }
+        
+        .home h1 {
+          font-size: 2.5rem;
+        }
+
+        .contact-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .contact-card {
+          min-width: auto;
+          width: 90%;
+          max-width: 400px;
+        }
+
+        .form-row {
+          flex-direction: column;
+        }
+        
+        .service-box, .review-card {
+          width: 100%;
+          max-width: 400px;
+        }
+
+        .photo-grid {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 15px;
+        }
+
+        .lightbox-content {
+          max-width: 95%;
+          max-height: 95%;
+        }
+
+        .lightbox-nav {
+          padding: 10px;
+          font-size: 20px;
+        }
+
+        .lightbox-prev {
+          left: 10px;
+        }
+
+        .lightbox-next {
+          right: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        section {
+          padding: 40px 15px;
+        }
+        
+        section h2 {
+          font-size: 2rem;
+        }
+        
+        .home-content {
+          padding: 25px;
+        }
+        
+        .home h1 {
+          font-size: 2rem;
+        }
+        
+        .book-button, .call-button {
+          padding: 12px 25px;
+          font-size: 1rem;
+        }
+
+        .phone-number {
+          font-size: 1.6rem;
+        }
+
+        .photo-grid {
+          grid-template-columns: 1fr;
+          gap: 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#specials">Specials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+      <div class="home-content">
+        <h1>LAVISH LASH</h1>
+        <p class="spa-tagline">Your destination for luxurious eyelash extensions</p>
+      </div>
+
+      <!-- Call and Book Online Cards -->
+      <div class="contact-buttons">
+        <!-- Call Card -->
+        <div class="contact-card">
+          <h3>📞 Call for Appointment</h3>
+          <a href="tel:+1-352-640-3934" class="phone-number">352-640-3934</a>
+          <p>Speak directly with our professional lash artists to schedule your perfect lash experience within 30 minutes.</p>
+        </div>
+
+        <!-- Book Online Card -->
+        <div class="contact-card">
+          <h3>💻 Book Online</h3>
+          <button class="book-button" onclick="showBookingForm()">Schedule Now</button>
+          <p>Use our convenient online form and we'll confirm your appointment within 30 minutes.</p>
+        </div>
+      </div>
+
+      <!-- Booking Form (Initially Hidden) -->
+      <div id="bookingForm" class="booking-form">
+        <button class="close-form" onclick="hideBookingForm()">&times;</button>
+        <h3>Schedule Your Lash Appointment</h3>
+        <form onsubmit="submitBooking(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Preferred Date *</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+              <label for="time">Preferred Time *</label>
+              <input type="time" id="time" name="time" min="09:00" max="13:00" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Lash Extension Service *</label>
+            <select id="service" name="service" required>
+              <option value="">Select a Service</option>
+              <option value="Classic Style - $100">Classic Style - $100</option>
+              <option value="Hybrid Style - $120">Hybrid Style - $120</option>
+              <option value="Volume Style - $120">Volume Style - $120</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Special Requests</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Any preferences, allergies, or special requests..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Request Appointment</button>
+          <p style="font-size: 0.9rem; color: #777; margin-top: 15px; text-align: center;">
+            We'll contact you within 30 minutes to confirm your appointment details.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Our Lash Extension Services</h2>
+      <h4>Professional eyelash extensions tailored to your style</h4>
+      <div class="services">
+        <div class="service-box">
+          <h3>Classic Style</h3>
+          <p>
+            Perfect for a natural, everyday look. One extension is applied to each natural lash for length and subtle definition.
+          </p>
+          <div class="price-wrapper">
+            <h4>$100</h4>
+          </div>
+        </div>
+
+        <div class="service-box">
+          <h3>Hybrid Style</h3>
+          <p>
+            The perfect blend of Classic and Volume techniques. Combines natural-looking Classic lashes with strategically placed Volume fans for texture and fullness.
+          </p>
+          <div class="price-wrapper">
+            <h4>$120</h4>
+          </div>
+        </div>
+
+        <div class="service-box">
+          <h3>Volume Style</h3>
+          <p>
+            For dramatic, full lashes. Multiple lightweight extensions are applied to each natural lash creating a bold, glamorous look perfect for special occasions.
+          </p>
+          <div class="price-wrapper">
+            <h4>$120</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <div class="gallery-container">
+        <h2>Our Work Gallery</h2>
+        <h4>See the stunning transformations we create</h4>
+        
+        <div class="photo-grid" id="photoGrid">
+          <div class="photo-item" onclick="openLightbox(0)">
+            <img src="https://purelab2021.com/wp-content/uploads/2022/02/take-you-quickly-to-become-an-eyelash-artist.jpg" alt="Eyelash Extension Application">
+            <div class="photo-overlay">
+              <h4>Professional Service</h4>
+              <p>Expert lash application process</p>
+            </div>
+          </div>
+          
+          <div class="photo-item" onclick="openLightbox(1)">
+            <img src="https://d3nb97lilvchvx.cloudfront.net/category_page/eyelash.jpg" alt="Beautiful Eyelash Extensions">
+            <div class="photo-overlay">
+              <h4>Volume Style</h4>
+              <p>Dramatic, full glamour lashes</p>
+            </div>
+          </div>
+          
+          <div class="photo-item" onclick="openLightbox(2)">
+            <img src="https://h4.com.tw/wp-content/uploads/2022/11/LASH-2.png" alt="Classic Lash Extensions">
+            <div class="photo-overlay">
+              <h4>Classic Style</h4>
+              <p>Natural, everyday elegance</p>
+            </div>
+          </div>
+          
+          <div class="photo-item" onclick="openLightbox(3)">
+            <img src="https://www.msemma.com.tw/webfile/webdate/4845ed651e6b73a79eff6ff045a54c68/bbd45059acf82f0ee9b2b1b73e4e13845.jpg" alt="Lash Extension Tools">
+            <div class="photo-overlay">
+              <h4>Professional Tools</h4>
+              <p>High-quality lash supplies</p>
+            </div>
+          </div>
+          
+          <div class="photo-item" onclick="openLightbox(4)">
+            <img src="https://www.gomaji.com/blog/wp-content/uploads/2019/12/Eyelash1.jpg" alt="Eyelash Extension Close-up">
+            <div class="photo-overlay">
+              <h4>Perfect Details</h4>
+              <p>Precision and beauty in every lash</p>
+            </div>
+          </div>
+          
+          <div class="photo-item" onclick="openLightbox(5)">
+            <img src="https://purelab2021.com/wp-content/uploads/2022/02/take-you-quickly-to-become-an-eyelash-artist.jpg" alt="Hybrid Lash Extensions">
+            <div class="photo-overlay">
+              <h4>Hybrid Style</h4>
+              <p>Perfect blend of natural and volume</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <div class="lightbox-content" onclick="event.stopPropagation()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">&#10094;</button>
+        <img id="lightboxImage" src="" alt="">
+        <button class="lightbox-nav lightbox-next" onclick="changeImage(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Specials Section -->
+    <section id="specials">
+      <h2>Why Choose LAVISH LASH?</h2>
+      <h4>Experience the luxury of professional eyelash extensions</h4>
+      <div class="services">
+        <div class="service-box">
+          <h3>Certified Professionals</h3>
+          <p>
+            Our experienced lash artists are certified and trained in the latest techniques to ensure safe, beautiful results every time.
+          </p>
+        </div>
+
+        <div class="service-box">
+          <h3>Premium Quality</h3>
+          <p>
+            We use only the highest quality synthetic mink lashes and medical-grade adhesives for long-lasting, comfortable wear.
+          </p>
+        </div>
+
+        <div class="service-box">
+          <h3>Personalized Service</h3>
+          <p>
+            Each client receives a customized consultation to determine the perfect lash style for your eye shape and lifestyle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Visit Our Studio</h2>
+      <div class="appointment-card">
+        <div class="appointment-map">
+          <div class="appointment-info">
+            <p><strong>📍 Address:</strong> 2606 SW 19th Ave Unit 200 Studio 9, Ocala FL 34471</p>
+            <p><strong>📞 Phone:</strong> <a href="tel:+1-352-640-3934">352-640-3934</a></p>
+            <p><strong>🕒 Hours:</strong> 9:00 AM - 1:00 AM</p>
+            <p><strong>💳 Payment:</strong> Cash and Card Accepted</p>
+          </div>
+          
+          <h3>Professional Eyelash Extensions</h3>
+          <p style="color: #666; text-align: center; margin-top: 15px;">
+            Located in the heart of Ocala, our luxurious studio provides a relaxing environment 
+            for your lash transformation. We're open late to accommodate your busy schedule!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 LAVISH LASH. All rights reserved. | Professional Eyelash Extensions in Ocala, FL</p>
+    </footer>
+
+    <script>
+      // Gallery images array（与上面的 6 张一一对应）
+      const galleryImages = [
+        'https://purelab2021.com/wp-content/uploads/2022/02/take-you-quickly-to-become-an-eyelash-artist.jpg',
+        'https://d3nb97lilvchvx.cloudfront.net/category_page/eyelash.jpg',
+        'https://h4.com.tw/wp-content/uploads/2022/11/LASH-2.png',
+        'https://www.msemma.com.tw/webfile/webdate/4845ed651e6b73a79eff6ff045a54c68/bbd45059acf82f0ee9b2b1b73e4e13845.jpg',
+        'https://www.gomaji.com/blog/wp-content/uploads/2019/12/Eyelash1.jpg',
+        'https://purelab2021.com/wp-content/uploads/2022/02/take-you-quickly-to-become-an-eyelash-artist.jpg'
+      ];
+
+      let currentImageIndex = 0;
+
+      // Booking Form Functions
+      function showBookingForm() {
+        document.getElementById('bookingForm').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function hideBookingForm() {
+        document.getElementById('bookingForm').classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      function submitBooking(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(event.target);
+        const formObject = {};
+        formData.forEach((value, key) => {
+          formObject[key] = value;
+        });
+        
+        alert('Thank you for your booking request! We will contact you within 30 minutes to confirm your lash appointment.');
+        console.log('Booking details:', formObject);
+        
+        hideBookingForm();
+        event.target.reset();
+      }
+
+      // Gallery Functions
+      function openLightbox(index) {
+        currentImageIndex = index;
+        document.getElementById('lightboxImage').src = galleryImages[index];
+        document.getElementById('lightbox').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      function changeImage(direction) {
+        currentImageIndex += direction;
+        if (currentImageIndex >= galleryImages.length) {
+          currentImageIndex = 0;
+        } else if (currentImageIndex < 0) {
+          currentImageIndex = galleryImages.length - 1;
+        }
+        document.getElementById('lightboxImage').src = galleryImages[currentImageIndex];
+      }
+
+      // Smooth scrolling for navigation links
+      document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+              const offsetTop = targetSection.offsetTop - 70; // Account for fixed nav
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+
+        // Set minimum date for booking form to today
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+          const today = new Date().toISOString().split('T')[0];
+          dateInput.setAttribute('min', today);
+        }
+
+        // Close booking form when clicking outside
+        document.addEventListener('click', function(event) {
+          const bookingForm = document.getElementById('bookingForm');
+          const bookButton = document.querySelector('.book-button');
+          
+          if (bookingForm.classList.contains('active') && 
+              !bookingForm.contains(event.target) && 
+              !bookButton.contains(event.target)) {
+            hideBookingForm();
+          }
+        });
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', function(event) {
+          const lightbox = document.getElementById('lightbox');
+          if (lightbox.classList.contains('active')) {
+            if (event.key === 'Escape') {
+              closeLightbox();
+            } else if (event.key === 'ArrowLeft') {
+              changeImage(-1);
+            } else if (event.key === 'ArrowRight') {
+              changeImage(1);
+            }
+          }
+        });
+      });
+
+      // Close lightbox when clicking on the lightbox background
+      document.getElementById('lightbox').addEventListener('click', function(event) {
+        if (event.target === this) {
+          closeLightbox();
+        }
+      });
+    </script>
+  </body>
+</html>
