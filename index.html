@@ -131,12 +131,17 @@
       }
 
       .home h1 {
-        font-size: 3.5rem;
+        /* Enhanced visibility for brand name without changing the light pink palette */
+        font-family: 'Matemasie', 'Josefin Sans', sans-serif;
+        font-size: clamp(2.4rem, 4vw + 1rem, 4.25rem);
         margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
-        color: #ffe3ec; /* lightest pink for title */
-        font-weight: 300;
-        letter-spacing: 2px;
+        letter-spacing: 2.5px;
+        background: linear-gradient(180deg, #fff5f9 0%, #ffe3ec 60%, #ffc1cc 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 3px 14px rgba(232,143,180,0.35);
+        font-weight: 700;
       }
 
       .spa-tagline {
@@ -393,6 +398,18 @@
       .service-box h3, .review-card h3 { color: #e88fb4; font-size: 1.6rem; margin-bottom: 15px; font-weight: 500; }
       .service-box p, .review-card p { color: #666; line-height: 1.7; }
 
+      /* Uniform service images (added for Classic/Hybrid/Volume) */
+      .service-img {
+        width: 100%;
+        height: 220px;              /* unify visible size */
+        object-fit: cover;          /* crop to fit nicely */
+        border-radius: 12px;
+        margin-bottom: 14px;
+        border: 1px solid rgba(255,193,204,0.45);
+        box-shadow: 0 6px 18px rgba(255,158,181,0.18);
+        background-color: #fff7fa;  /* soft placeholder while loading */
+      }
+
       /* Price Wrapper */
       .service-box .price-wrapper {
         margin-top: 20px;
@@ -433,7 +450,7 @@
       @media (max-width: 768px) {
         nav { flex-direction: column; padding: 15px; }
         nav ul { margin-top: 15px; }
-        .home h1 { font-size: 2.5rem; }
+        .home h1 { font-size: 2.6rem; }
         .contact-buttons { flex-direction: column; align-items: center; }
         .contact-card { min-width: auto; width: 90%; max-width: 400px; }
         .form-row { flex-direction: column; }
@@ -449,7 +466,7 @@
         section { padding: 40px 15px; }
         section h2 { font-size: 2rem; }
         .home-content { padding: 25px; }
-        .home h1 { font-size: 2rem; }
+        .home h1 { font-size: 2.2rem; }
         .book-button, .call-button { padding: 12px 25px; font-size: 1rem; }
         .phone-number { font-size: 1.6rem; }
         .photo-grid { grid-template-columns: 1fr; gap: 15px; }
@@ -525,7 +542,7 @@
             </div>
             <div class="form-group">
               <label for="time">Preferred Time *</label>
-              <input type="time" id="time" name="time" min="09:00" max="13:00" required>
+              <input type="time" id="time" name="time" min="09:30" max="17:30" required>
             </div>
           </div>
 
@@ -558,6 +575,7 @@
       <h4>Professional eyelash extensions tailored to your style</h4>
       <div class="services">
         <div class="service-box">
+          <img src="1.jpg" alt="Classic Style eyelash extensions result" class="service-img">
           <h3>Classic Style</h3>
           <p>
             Perfect for a natural, everyday look. One extension is applied to each natural lash for length and subtle definition.
@@ -568,6 +586,7 @@
         </div>
 
         <div class="service-box">
+          <img src="2.jpg" alt="Hybrid Style eyelash extensions result" class="service-img">
           <h3>Hybrid Style</h3>
           <p>
             The perfect blend of Classic and Volume techniques. Combines natural-looking Classic lashes with strategically placed Volume fans for texture and fullness.
@@ -578,6 +597,7 @@
         </div>
 
         <div class="service-box">
+          <img src="3.jpg" alt="Volume Style eyelash extensions result" class="service-img">
           <h3>Volume Style</h3>
           <p>
             For dramatic, full lashes. Multiple lightweight extensions are applied to each natural lash creating a bold, glamorous look perfect for special occasions.
@@ -694,7 +714,7 @@
           <div class="appointment-info">
             <p><strong>📍 Address:</strong> 2606 SW 19th Ave Unit 200 Studio 9, Ocala FL 34471</p>
             <p><strong>📞 Phone:</strong> <a href="tel:+1-352-640-3934">352-640-3934</a></p>
-            <p><strong>🕒 Hours:</strong> 9:00 AM - 1:00 AM</p>
+            <p><strong>🕒 Hours:</strong> 9:30AM-5:30PM</p>
             <p><strong>💳 Payment:</strong> Cash and Card Accepted</p>
           </div>
           
