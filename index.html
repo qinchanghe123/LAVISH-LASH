@@ -132,17 +132,22 @@
 
 /* 让首页店名用白色，保持可读性 */
 .home h1 {
-  font-family: 'Matemasie', 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;   /* ← 使用正常字体 */
   font-size: clamp(2.4rem, 4vw + 1rem, 4.25rem);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   letter-spacing: 2.5px;
-  color: #ffffff;                 /* ← 关键：店名改为白色 */
-  text-shadow: 0 2px 10px rgba(0,0,0,0.18); /* 轻微阴影提升对比 */
+  color: #ffffff;                 /* 店名白色 */
+  text-shadow: 0 2px 10px rgba(0,0,0,0.18);
   font-weight: 700;
-  /* 移除之前的渐变文字相关设置 */
   background: none;
   -webkit-background-clip: initial;
   background-clip: initial;
+}
+
+.home-address{
+  font-size: 1rem;
+  margin: 0 0 20px 0;
+  opacity: 0.95;
 }
 
 
@@ -491,6 +496,7 @@
     <section id="home" class="home">
       <div class="home-content">
         <h1>LAVISH LASH</h1>
+        <p class="home-address">2606 SW 19th Ave Unit 200 Studio 9, Ocala, FL 34471</p>
         <p class="spa-tagline">Your destination for luxurious eyelash extensions</p>
       </div>
 
@@ -503,11 +509,9 @@
           <p>Speak directly with our professional lash artists to schedule your perfect lash experience within 30 minutes.</p>
         </div>
 
-        <!-- Book Online Card -->
+        <!-- Book Online Card (replaced with Setmore booking code) -->
         <div class="contact-card">
-          <h3>💻 Book Online</h3>
-          <button class="book-button" onclick="showBookingForm()">Schedule Now</button>
-          <p>Use our convenient online form and we'll confirm your appointment within 30 minutes.</p>
+          <script id='setmore_script' type='text/javascript' src='https://assets.setmore.com/integration/static/setmoreIframeLive.js'></script><a style='float:none;' id='Setmore_button_iframe' href='https://lavishlashfl.setmore.com'><img border='none' src='https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg' alt='Click here to book the appointment using setmore' /></a>
         </div>
       </div>
 
