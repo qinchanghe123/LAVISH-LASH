@@ -500,18 +500,21 @@
         <p class="spa-tagline">Your destination for luxurious eyelash extensions</p>
       </div>
 
-      <!-- Call and Book Online Cards -->
+      <!-- Call + Book Now (合并为同一块) -->
       <div class="contact-buttons">
-        <!-- Call Card -->
         <div class="contact-card">
           <h3>📞 Call for Appointment</h3>
           <a href="tel:+1-352-640-3934" class="phone-number">352-640-3934</a>
           <p>Speak directly with our professional lash artists to schedule your perfect lash experience within 30 minutes.</p>
-        </div>
 
-        <!-- Book Online Card (replaced with Setmore booking code) -->
-        <div class="contact-card">
-          <script id='setmore_script' type='text/javascript' src='https://assets.setmore.com/integration/static/setmoreIframeLive.js'></script><a style='float:none;' id='Setmore_button_iframe' href='https://lavishlashfl.setmore.com'><img border='none' src='https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg' alt='Click here to book the appointment using setmore' /></a>
+          <!-- Book Now（放入同一块） -->
+          <div style="margin-top:12px;">
+            <h3 style="margin-top:10px;">💻 Book Online</h3>
+            <script id='setmore_script' type='text/javascript' src='https://assets.setmore.com/integration/static/setmoreIframeLive.js'></script>
+            <a style="float:none; display:inline-block;" id="Setmore_button_iframe" href="https://lavishlashfl.setmore.com">
+              <img border="none" src="https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg" alt="Click here to book the appointment using setmore" />
+            </a>
+          </div>
         </div>
       </div>
 
@@ -733,6 +736,17 @@
       </div>
     </section>
 
+    <!-- Bottom Book Now Block（在底部新增同样风格的块，放 Book Now 按钮） -->
+    <section id="booknow-bottom" style="padding-top:0;">
+      <div class="contact-card" style="max-width:380px; margin:0 auto;">
+        <h3>💻 Book Online</h3>
+        <a style="float:none; display:inline-block;" href="https://lavishlashfl.setmore.com" target="_blank" rel="noopener">
+          <img border="none" src="https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg" alt="Click here to book the appointment using setmore" />
+        </a>
+        <p style="margin-top:10px; color:#666;">Instant booking — opens our Setmore page.</p>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer>
       <p>&copy; 2025 LAVISH LASH. All rights reserved. | Professional Eyelash Extensions in Ocala, FL</p>
@@ -833,9 +847,11 @@
           const bookingForm = document.getElementById('bookingForm');
           const bookButton = document.querySelector('.book-button');
           
-          if (bookingForm.classList.contains('active') && 
-              !bookingForm.contains(event.target) && 
-              !bookButton.contains(event.target)) {
+          if (
+            bookingForm.classList.contains('active') && 
+            !bookingForm.contains(event.target) && 
+            !(bookButton && bookButton.contains(event.target))
+          ) {
             hideBookingForm();
           }
         });
